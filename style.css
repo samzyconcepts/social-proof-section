@@ -1,0 +1,259 @@
+:root {
+	--very-dark-magenta: hsl(300, 43%, 22%);
+	--soft-pink: hsl(333, 80%, 67%);
+	--dark-grayish-magenta: hsl(303, 10%, 53%);
+	--light-grayish-magenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Spartan", sans-serif;
+	font-size: 93.75%;
+	position: relative;
+}
+
+.bg-top {
+	background: url(images/bg-pattern-top-desktop.svg) no-repeat;
+	height: 100%;
+	width: 600px;
+	position: absolute;
+	top: -35px;
+	z-index: -1;
+}
+
+.bg-bottom {
+	background: url(images/bg-pattern-bottom-desktop.svg) no-repeat;
+	height: 100%;
+	width: 1000px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	overflow: hidden;
+}
+.container {
+	max-width: 75%;
+	margin: 0 auto;
+	padding: 3rem 0;
+}
+
+#main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Title section */
+.title {
+	width: 45%;
+}
+.title h1 {
+	font-size: 3.33rem;
+	font-weight: 700;
+	color: var(--very-dark-magenta);
+	letter-spacing: -1.2;
+	line-height: 1;
+}
+
+.title p {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--dark-grayish-magenta);
+	line-height: 1.8;
+	padding-top: 1rem;
+}
+
+/* Rating section */
+.rating {
+	display: grid;
+	grid-template-columns: repeat(15, 2rem);
+	grid-template-rows: repeat(3, 4rem);
+	row-gap: 1rem;
+}
+
+.rated {
+	display: flex;
+	align-items: center;
+	padding: 1rem 2rem;
+	background: var(--light-grayish-magenta);
+	border-radius: 10px;
+}
+.rated:first-child {
+	grid-column: 1 / span 12;
+}
+.rated:nth-child(2) {
+	grid-column: 2 / span 12;
+	grid-row: 2;
+}
+.rated:nth-child(3) {
+	grid-column: 3 / span 12;
+	grid-row: 3;
+}
+
+.rated h3 {
+	color: var(--very-dark-magenta);
+	font-size: 0.75rem;
+	font-weight: 700;
+	margin-left: 1rem;
+}
+
+/* testimonial section */
+.testimonial {
+	display: flex;
+	gap: 1.5rem;
+	margin-top: 4rem;
+}
+.profile {
+	display: flex;
+}
+.profileImg img {
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	margin-right: 1rem;
+}
+.detail h3 {
+	color: var(--white);
+	font-weight: 700;
+	font-size: 0.75rem;
+	line-height: 1.5;
+}
+.status {
+	color: var(--soft-pink);
+	font-size: 0.7rem;
+}
+.card p {
+	font-size: 0.8rem;
+	line-height: 1.4;
+	padding-top: 1rem;
+	color: var(--white);
+}
+.card {
+	background: var(--very-dark-magenta);
+	padding: 2rem;
+	border-radius: 10px;
+	width: calc(100% / 3);
+	height: 13rem;
+}
+
+.card-2 {
+	margin: 1rem 0;
+}
+.card-3 {
+	margin-top: 2rem;
+}
+
+/* attribution style for the footer side */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+	.title h1 {
+		font-size: 2rem;
+	}
+	.card {
+		height: 14rem;
+	}
+	.bg-bottom {
+		height: 90%;
+		width: 600px;
+		/* bottom: -12rem; */
+	}
+}
+
+@media (max-width: 940px) {
+	.container {
+		max-width: 85%;
+	}
+	#main {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.title {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.title h1,
+	.title p {
+		text-align: center;
+	}
+	.rating {
+		grid-template-columns: 1fr;
+		row-gap: 1rem;
+		width: 100%;
+	}
+	.rated {
+		justify-content: center;
+	}
+	.rated:first-child {
+		grid-column: 1 / span 12;
+	}
+	.rated:nth-child(2) {
+		grid-column: 1 / span 12;
+		grid-row: 2;
+	}
+	.rated:nth-child(3) {
+		grid-column: 1 / span 12;
+		grid-row: 3;
+	}
+}
+
+@media (max-width: 800px) {
+	.testimonial {
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+	}
+	.card {
+		width: 100%;
+	}
+	.card-2 {
+		margin: 0;
+	}
+	.card-3 {
+		margin: 0;
+	}
+}
+
+@media (max-width: 615px) {
+	.bg-top {
+		background: url(images/bg-pattern-top-mobile.svg) no-repeat;
+		height: 375px;
+		width: 375px;
+	}
+	.bg-bottom {
+		background: url(images/bg-pattern-bottom-mobile.svg) no-repeat;
+		height: 375px;
+		width: 500px;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+	}
+	.container {
+		max-width: 80%;
+	}
+	.title h1 {
+		font-size: 1.8rem;
+	}
+	.title p {
+		font-size: 0.8rem;
+	}
+	.rated {
+		flex-direction: column;
+	}
+
+	.rated h3 {
+		padding-top: 0.2rem;
+	}
+}
