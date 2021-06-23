@@ -15,7 +15,6 @@
 body {
 	font-family: "Spartan", sans-serif;
 	font-size: 93.75%;
-	position: relative;
 	background-image: url(../../images/bg-pattern-top-desktop.svg),
 		url(../../images/bg-pattern-bottom-desktop.svg);
 	background-repeat: no-repeat;
@@ -23,7 +22,7 @@ body {
 }
 
 .container {
-	max-width: 75%;
+	max-width: 80%;
 	margin: 0 auto;
 	padding: 3rem 0;
 }
@@ -96,11 +95,12 @@ body {
 }
 .profile {
 	display: flex;
+	align-items: center;
 }
 .profileImg img {
 	border-radius: 50%;
-	height: 30px;
-	width: 30px;
+	height: 40px;
+	width: 40px;
 	margin-right: 1rem;
 }
 .detail h3 {
@@ -156,6 +156,7 @@ body {
 	.container {
 		max-width: 85%;
 	}
+
 	#main {
 		flex-direction: column;
 		justify-content: center;
