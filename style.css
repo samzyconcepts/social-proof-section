@@ -16,27 +16,12 @@ body {
 	font-family: "Spartan", sans-serif;
 	font-size: 93.75%;
 	position: relative;
+	background-image: url(../../images/bg-pattern-top-desktop.svg),
+		url(../../images/bg-pattern-bottom-desktop.svg);
+	background-repeat: no-repeat;
+	background-position: top left, bottom right;
 }
 
-.bg-top {
-	background: url(images/bg-pattern-top-desktop.svg) no-repeat;
-	height: 100%;
-	width: 600px;
-	position: absolute;
-	top: -35px;
-	z-index: -1;
-}
-
-.bg-bottom {
-	background: url(images/bg-pattern-bottom-desktop.svg) no-repeat;
-	height: 100%;
-	width: 1000px;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-	overflow: hidden;
-}
 .container {
 	max-width: 75%;
 	margin: 0 auto;
@@ -165,11 +150,6 @@ body {
 	.card {
 		height: 14rem;
 	}
-	.bg-bottom {
-		height: 90%;
-		width: 600px;
-		/* bottom: -12rem; */
-	}
 }
 
 @media (max-width: 940px) {
@@ -227,18 +207,9 @@ body {
 }
 
 @media (max-width: 615px) {
-	.bg-top {
-		background: url(images/bg-pattern-top-mobile.svg) no-repeat;
-		height: 375px;
-		width: 375px;
-	}
-	.bg-bottom {
-		background: url(images/bg-pattern-bottom-mobile.svg) no-repeat;
-		height: 375px;
-		width: 500px;
-		right: 0;
-		bottom: 0;
-		overflow: hidden;
+	body {
+		background-image: url(../../images/bg-pattern-top-mobile.svg),
+			url(../../images/bg-pattern-bottom-mobile.svg);
 	}
 	.container {
 		max-width: 80%;
